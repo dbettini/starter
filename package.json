@@ -1,0 +1,47 @@
+{
+  "name": "hello-world",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node src/index.js | bunyan -o short",
+    "serve:dist": "cd dist && http-server --cors --proxy 'http://localhost:4001?' -p 4001",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint .",
+    "db:migrate": "node bin/migrate.js",
+    "db:create": "node bin/create.js"
+  },
+  "dependencies": {
+    "@hapi/boom": "^9.1.4",
+    "bcrypt": "^5.0.1",
+    "bunyan": "^1.8.15",
+    "commander": "^8.2.0",
+    "core-js": "^3.6.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-promise-router": "^4.1.0",
+    "express-session": "^1.17.2",
+    "helmet": "^4.6.0",
+    "knex": "^0.95.11",
+    "lodash": "^4.17.21",
+    "objection": "^2.2.15",
+    "objection-db-errors": "^1.1.2",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "pg": "^8.7.1",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-airbnb": "^5.0.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "http-server": "^13.0.1",
+    "vue-template-compiler": "^2.6.11"
+  }
+}
